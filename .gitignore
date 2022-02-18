@@ -7,3 +7,5 @@ logs/
 site-docs/
 LICENSE
 NOTICE
+kafka-java/.idea
+kafka-java/target
