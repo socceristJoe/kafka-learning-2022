@@ -1,0 +1,9 @@
+.vscode
+bin/
+data/
+libs/
+licenses/
+logs/
+site-docs/
+LICENSE
+NOTICE
