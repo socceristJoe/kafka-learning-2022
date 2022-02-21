@@ -9,7 +9,7 @@ zookeeper-server-start.sh config/zookeeper.properties
 
 Run kafka
 ```
-kafka-server-start.sh  config/server.properties
+kafka-server-start.sh config/server.properties
 ```
 
 ### Topics
