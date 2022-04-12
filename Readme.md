@@ -9,6 +9,8 @@ zookeeper-server-start.sh config/zookeeper.properties
 
 Run kafka
 ```
+kafka-server-stop.sh config/server.properties
+
 kafka-server-start.sh config/server.properties
 ```
 
@@ -23,7 +25,7 @@ kafka-topics.sh --bootstrap-server localhost:9092 --list
 ```
 Details
 ```
-kafka-topics.sh --bootstrap-server localhost:9092 --topic joe-first --describe
+kafka-topics.sh --bootstrap-server localhost:9092 --topic joe-test-4 --describe
 ```
 
 ### Producer

@@ -29,14 +29,14 @@ public class FirstConsumerAssignSeek {
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(properties);
 
-        long offSetToRead = 5L;
-        TopicPartition partitionToRead = new TopicPartition(topic, 1);
+        long offSetToRead = 15L;
+        TopicPartition partitionToRead = new TopicPartition(topic, 0);
         consumer.assign(Arrays.asList(partitionToRead));
         consumer.seek(partitionToRead, offSetToRead);
 
         logger.info("Partition Reading: " + partitionToRead.toString());
 
-        int msgNum = 5;
+        int msgNum = 10;
         boolean keepReading = true;
         int msgReadNum = 0;
 

@@ -36,6 +36,12 @@ public class FirstProducerCb {
                     }
                 }
             });
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
         producer.flush();
         producer.close();

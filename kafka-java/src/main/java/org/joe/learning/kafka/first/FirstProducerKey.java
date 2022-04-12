@@ -21,19 +21,19 @@ public class FirstProducerKey {
         properties.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 
         String topic = "joe-test-4";
-        String value = "hello from intellij_";
-        String key = "id_";
 
         KafkaProducer<String, String> producer = new KafkaProducer<>(properties);
 
         for (int i = 0; i < 10; i++) {
-            ProducerRecord<String, String> record = new ProducerRecord<>(topic, key + Integer.toString(i), value + Integer.toString(i));
+            String value = "hello from intellij_" + i;
+            String key = "id_" + i;
+            ProducerRecord<String, String> record = new ProducerRecord<>(topic, key, value);
 
-            logger.info(key + Integer.toString(i));
+            logger.info(key);
             producer.send(record, new Callback() {
                 public void onCompletion(RecordMetadata recordMetadata, Exception e) {
                     if (e == null) {
-                        logger.info("Received Topic: " + recordMetadata.topic() + "\n Partition: " + recordMetadata.partition() + "\n Offset: " + recordMetadata.offset() + "\n Timestamp: " + recordMetadata.timestamp());
+                        logger.info("Received Topic: " + recordMetadata.topic() + "\n Partition: " + recordMetadata.partition()+ "\n Key: " + record.key() + "\n Message: " + record.value() + "\n Offset: " + recordMetadata.offset() + "\n Timestamp: " + recordMetadata.timestamp());
                     } else {
                         logger.error("Error:", e);
                     }
