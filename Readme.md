@@ -67,3 +67,4 @@ Reset offset
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group 001 --reset-offsets --to-earliest --execute --topic joe-second
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --group 001 --reset-offsets --shift-by -2 --execute --topic joe-second
 ```
+
