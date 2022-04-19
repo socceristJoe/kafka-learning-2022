@@ -7,7 +7,8 @@ logs/
 site-docs/
 LICENSE
 NOTICE
-*/target
-*/.idea
-*/.gradle
+target/
+.idea/
+.gradle
 kafka-starter/producer-wikimedia/build
+kafka-starter/consumer-opensearch/build
