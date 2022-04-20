@@ -12,3 +12,4 @@ target/
 .gradle
 kafka-starter/producer-wikimedia/build
 kafka-starter/consumer-opensearch/build
+kafka-starter/stream-wikimedia/build
